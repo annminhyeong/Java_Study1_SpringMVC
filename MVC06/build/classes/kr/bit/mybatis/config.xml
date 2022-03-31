@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+  <!-- config파일과 db.properties 파일을 연결 -->
+  <properties resource="kr/bit/mybatis/db.properties"/>
+  
+  
+  <typeAliases>
+      <!--VO 별칭 설정-->
+      <typeAlias type="kr.bit.model.MemberVO" alias="memberVO"/>
+  </typeAliases>
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>   
+      <!--POOLED는 데이터 베이스를 연결할때 connection Pool기법을 쓰겠다는 의미-->
+      <dataSource type="POOLED">       
+        <!--데이터 베이스를 연결하는 부분-->
+      	<!--${이름}과 db.properties 이름과 일치해야 함-->
+        <property name="driver" value="${driver}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <mappers>
+    <!--Mapper.xml 연결하는 부분  -->
+    <mapper resource="kr/bit/mybatis/MemberMapper.xml"/>
+  </mappers>
+</configuration>

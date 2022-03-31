@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+	
+	<!--Servlet 매핑 1번 방법 시작-->
+    <servlet>
+        <!--<servlet>와 <servlet-mapping>의 <servlet-name>을 연결-->
+        <!--<servlet>와 <servlet-mapping>의 <servlet-name>의 이름은 같아야함  -->
+        <!--<servlet-name>은 아무거나 사용 가능하지만 통상적으로 서블릿 클래스이름으로 적기-->
+        <servlet-name>HelloServlet</servlet-name>
+        
+        <!--진짜 서블릿 주소-->
+        <!--쓰는이유: 클라이언트한테 실제경로를 알려줄 수 없기 때문에 -->
+        <!-- /WEB-INF/classes는 이클립스에서 자동으로 인식하므로 생략가능 -->
+        <servlet-class>kr.web.controller.HelloServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <!--<servlet>와 <servlet-mapping>의 <servlet-name>을 연결-->
+        <!--<servlet>와 <servlet-mapping>의 <servlet-name>의 이름은 같아야함  -->
+        <!--<servlet-name>은 아무거나 사용 가능-->
+        <servlet-name>HelloServlet</servlet-name>
+        
+        <!--url상의 서블릿 이름(실제경로를 <url-pattern> 의 url로 변경)-->
+        <url-pattern>/hs1.do</url-pattern>
+    </servlet-mapping>
+	<!--Servlet 매핑 1번 방법 끝-->
+	
+</web-app>
