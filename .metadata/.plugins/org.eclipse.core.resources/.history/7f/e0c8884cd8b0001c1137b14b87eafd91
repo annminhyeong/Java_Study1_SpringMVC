@@ -1,0 +1,14 @@
+package com.spring.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.spring.model.MemberVO;
+
+@Mapper
+public interface MemberMapper {
+	
+	//회원 리스트 보기
+	public List<MemberVO> memberList()
+}

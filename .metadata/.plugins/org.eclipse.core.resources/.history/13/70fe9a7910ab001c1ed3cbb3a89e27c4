@@ -1,0 +1,39 @@
+package kr.bit.redirect;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/rc.do")
+public class RedirectController extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String name ="banana";
+		int age = 20;
+		String pass ="12345";
+		
+		//controller에서 view페이지로 전환하는 방법
+		//1.redirect 기법
+		
+		//문제점
+		//1. 민감한 정보는 넘기기 어렵다.
+		//2. 넘기는 값이 많으면 복잡해진다.
+		// url뒤에?data1=값1&data2=값2&data3=값3 , get방식(Querystring)
+		response.sendRedirect("view/rcResult.jsp?name="+name+"&age="+age+"&pass="+pass);
+		
+		
+		//view(rcResult)에서는 값을 request.getParameter로 값을 받음
+		
+		
+		
+		
+	}
+
+}

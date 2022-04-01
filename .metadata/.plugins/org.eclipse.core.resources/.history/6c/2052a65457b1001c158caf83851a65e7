@@ -1,0 +1,12 @@
+package com.spring.model;
+
+public class BoardVO {
+	
+	private int idx; //글번호
+	private String title; //글제목
+	private String contents; //글내용
+	private int count; //조회수
+	private String writer; //작성자
+	private String indate; //작성일
+	
+}	

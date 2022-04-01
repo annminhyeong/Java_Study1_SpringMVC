@@ -1,0 +1,24 @@
+mybatis 구성파일 (https://blog.mybatis.org)
+이름은 내가 임의로 정할 수 있음
+Mybatis Configuration file(config.xml)은 환경설정파일 (제일 중요)
+properties file(db.properties)은 데이터 베이스 연결 정보파일
+Mapper file(Mapper.xml) 파일은 sql쿼리를 저장하는 파일
+
+
+java에서 데이터 베이스를 연결때 가장 많이 부화가 걸린다. 
+JDBC는 각 요청마다 데이터베이스를 연결하고 접속을 종료하는 방법을 사용해서 db에 접속하는 시간이 걸렸다.
+mybatis는 데이터베이스를 연결하고 종료하는 것이 아닌 재활용하는 방법으로 부화를 줄였다.
+
+
+connection pool기법
+connection pool 메모리에  미리 database connection을 여러개 (5~8개)를 만듬
+connection을 사용하고 종료하는 것이 아님 반납하는 방법을 사용해 db에 접속하는 시간이 안걸림
+connection이 전부 사용중이면 delay가 생김
+
+
+JDBC에서는 Connection객체로 용어를  mybatis는 SqlSession이로고 함
+SqlSession이 여러개 있는 것을 SqlSessionFactory라고 함
+
+Spring에서는 Config 파일을 거의 사용안함
+DB연결은 root-context-xml에서 설정
+

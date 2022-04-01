@@ -1,0 +1,28 @@
+package com.spring.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Mapper;
+
+import com.spring.model.MemberVO;
+
+// Mapper 인터페이스의 이름과 Mapper.xml의 namespace의 이름과 같아야함
+@Mapper
+public interface MemberMapper {
+	
+	//회원 리스트 보기
+	public List<MemberVO> memberList(); // - mapper.xml의  SQL id="memberList"와 함수명과 이름이 같음
+		
+	//회원가입
+	public int memberInsert(MemberVO vo); // - mapper.xml의  SQL id="memberInsert"와 함수명과 이름이 같음
+	
+	//회원 삭제
+	public int memberDelete(int num); // - mapper.xml의  SQL id="memberDelete"와 함수명과 이름이 같음
+	
+	//회원 상세보기
+	public MemberVO memberContent(int num); // - mapper.xml의  SQL id="memberContent"와 함수명과 이름이 같음
+	
+	//회원 수정하기
+	public int memberUpdate(MemberVO vo); // - mapper.xml의  SQL id="memberUpdate"와 함수명과 이름이 같음
+
+}

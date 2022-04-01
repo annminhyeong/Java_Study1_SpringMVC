@@ -1,0 +1,13 @@
+create table tb_board(
+	idx int not null auto_increment,
+	title varchar(100) not null,
+	contents varchar(4000) not null,
+	count int,
+	writer varchar(30) not null,
+	indate datetime default now() not null,
+	primary key (idx) 
+);
+
+select * from tb_board;
+ 
+insert into tb_board(title, contents, count, writer) value("글제목","글내용", 3, "작성자");

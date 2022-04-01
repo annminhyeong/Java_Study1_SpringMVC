@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="javax.servlet.jsp"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="javax.servlet.jsp"/>
+			<item value="javax.servlet"/>
+			<item value="org.springframework-version"/>
+			<item value="orm"/>
+			<item value="spring-webmvc"/>
+			<item value="spring-context"/>
+			<item value="spring"/>
+			<item value="asm"/>
+			<item value="spring-context-support"/>
+			<item value="spring-core"/>
+			<item value="org.springframework"/>
+			<item value="jquery"/>
+			<item value="delete"/>
+			<item value="member"/>
+			<item value="attachment"/>
+		</list>
+		<list key="replacehistory">
+			<item value="&quot;"/>
+			<item value=""/>
+			<item value="&apos;"/>
+			<item value=" "/>
+			<item value="&apos;i"/>
+			<item value="t&apos;"/>
+			<item value="&apos;t"/>
+			<item value="out.println(&apos;&lt;"/>
+			<item value="out.println(&quot;&lt;t"/>
+			<item value="out.println(&quot;"/>
+			<item value="out.println"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1371"/>
+		<item key="DIALOG_Y_ORIGIN" value="262"/>
+		<item key="DIALOG_WIDTH" value="340"/>
+		<item key="DIALOG_HEIGHT" value="454"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

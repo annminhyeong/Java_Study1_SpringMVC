@@ -64,14 +64,20 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.2.1</version>
 		</dependency>
-		
+
 		<!-- commons-io (file uplaod api) -->
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<version>1.4</version>
 		</dependency>
-
+		
+		<!-- spring-core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.2.4.RELEASE</version>
+		</dependency>
 
 
 		<!-- 여기부터 아래는 기본 dependency -->
@@ -151,7 +157,7 @@
 			<version>1</version>
 		</dependency>
 
-		<!-- Servlet 버전올리기-->
+		<!-- Servlet 버전올리기 -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>

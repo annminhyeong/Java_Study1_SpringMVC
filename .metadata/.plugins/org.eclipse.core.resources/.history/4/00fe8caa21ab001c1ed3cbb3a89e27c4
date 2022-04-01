@@ -1,0 +1,63 @@
+<%@page import="kr.bit.model.MemberVO"%>
+<%@page import="kr.bit.model.MemberDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%
+int num =Integer.parseInt(request.getParameter("num"));
+MemberDAO dao = new MemberDAO();
+
+MemberVO vo = dao.memberContent(num);
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>memberContent page</title>
+
+<script type="text/javascript">
+	function goList() {
+		location.href="memberList.jsp";
+	}
+</script>
+</head>
+<body>
+<p>MVC02 - controller + view</p>
+<form action='memberUpdate.jsp' name='form1' method='post'>
+	<input type='hidden' name='num' value='<%=vo.getNum() %>'>
+	<table border ='1'>
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>아이디</th>
+				<th>비밀번호</th>
+				<th>이름</th>
+				<th>나이</th>
+				<th>이메일</th>
+				<th>전화번호</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th><%=vo.getNum() %></th>
+				<th><%=vo.getId() %></th>
+				<th><%=vo.getPass() %></th>
+				<th><%=vo.getName() %></th>
+				<th><input type='text' name='age' value='<%=vo.getAge()%>'></th>
+				<th><input type='text' name='email' value='<%=vo.getEmail()%>'></th>
+				<th><input type='text' name='phone' value='<%=vo.getPhone()%>'></th>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td><input type='submit' value='제출'></td>
+				<td><input type='reset' value='취소'></td>
+				<td><input type="button" value="뒤로" onclick="goList()"></td>
+			</tr>
+		</tfoot>
+	
+	</table>
+
+</form>
+</body>
+</html>

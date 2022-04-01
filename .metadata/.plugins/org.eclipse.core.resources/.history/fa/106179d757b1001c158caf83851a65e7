@@ -1,0 +1,7 @@
+package com.spring.mapper;
+
+
+@Mapper
+public interface BoardMapper {
+
+}

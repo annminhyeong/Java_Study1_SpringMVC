@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:set var="cnt" value="3" />
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<c:choose>
+		<c:when test="${cnt%2==0}">
+			<p>짝수입니다</p>
+		</c:when>
+		<c:when test="${cnt%2!=0 }">
+			<p>홀수입니다</p>
+		</c:when>
+		<c:otherwise>
+			<p>둘다 아니에요</p>
+		</c:otherwise>
+	</c:choose>
+</body>
+</html>
